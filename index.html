@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ospoly result </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<nav>
+    <ul>
+        <li>HOME</li>
+        <li>CHECKERS</li>
+        <li>PORTAL</li>
+        <li>SCHOOL RULES</li>
+        <li>PAYMENT</li>
+        
+    </ul>
+</nav>
+<marquee behavior="" direction="">VERIFY YOUR O'LEVEL RESULY IN OSUN STATE POLYTECHNIC IREE PORTAL</marquee>
+<h2> OSPOLY RESULT</h2>
+<label for="name">Name</label>
+<input type="text" placeholder="name" id="get"><br><br>
+
+<label for="matriculation number">matric number</label>
+<input type="matric-number" id="number"><br><br>
+ 
+<label for="">department</label>
+<input type="text" name="" id="dep"><br><br>
+
+<label for="">Email-address</label>
+<input type="text"id="mail" placeholder="ospoly@gmail.com"><br><br>
+
+<label for="">Gender</label>
+<input type="radio" name="gender">boy
+<input type="radio" name="gender">girl<br><br>
+
+<label for="">O'Level result</label>
+ <input type="checkbox">MATH
+ <input type="checkbox">ENGLISH
+ <input type="checkbox">PHYSICS
+ <input type="checkbox">CHEMISTRY<br><br>
+
+<label for="score"> Score</label>
+<input type="text" id="score">
+
+<button onclick="grade()">get mark</button>
+<h6 id="grade"></h6>
+
+<button onclick="name()">submit</button>
+<h2  id="name"></h2>
+<body>
+    
+    <script>
+    function grade(){
+        let score=document.getElementById("score").value
+        if( score>=70 && score<=100){
+            document.getElementById('grade').innerHTML='A'
+        }
+
+        else if( score >=60 && score <= 69){
+            document.getElementById('grade').innerHTML='B'
+        }
+        else if(score>=50 && score<=59){
+             document.getElementById('grade').innerHTML='C'
+        }
+        else if(score>=45 && score<=49){
+             document.getElementById('grade').innerHTML='D'
+        }
+        else if(score>=40 && score<=44){
+            document.getElementById('grade').innerHTML='E'
+        }
+        else{
+           document.getElementById('grade').innerHTML='you failed'
+        }
+            
+        function name(){
+            let get=document.getElementById('get').value
+            if(get ='' && get !=''){
+                document.getElementById('name').innerHTML='invalid details'
+            }
+        }
+        
+    }
+    </script>
+    
+</body>
+</html>
